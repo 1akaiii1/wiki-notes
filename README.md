@@ -1,4 +1,4 @@
-# wiki-notes-nvim
+# wiki-notes
 
 - Wiki personal minimalista en Markdown para Neovim.
 
