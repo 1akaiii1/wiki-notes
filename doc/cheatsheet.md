@@ -1,7 +1,7 @@
 
 # Cheatsheet de Wiki Notes
 
-Referencia rápida de atajos y comandos del plugin **wiki-notes-nvim**.
+Referencia rápida de atajos y comandos del plugin **wiki-notes**.
 
 ## Globales (cualquier buffer)
 
