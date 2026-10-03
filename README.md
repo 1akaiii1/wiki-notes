@@ -2,35 +2,11 @@
 
 - Wiki personal minimalista en Markdown para Neovim.
 
-- Las notas son archivos Markdown con frontmatter YAML.
-- Enlaza con `[wikilinks]`; salta y crea al vuelo.
-- Renombra o borra una nota — todas las referencias se actualizan solas.
-- Los tags viven en el frontmatter y se editan con un comando.
-- El índice de `notes/` se regenera automáticamente.
-
----
-
-## Características
-
-| | |
-|---|---|
-| **Wikilinks** | `[nombre-nota]` salta al destino; si no existe, se crea desde plantilla. |
-| **Backlinks** | `:WNbacklinks` lista cada nota que referencia a la actual. |
-| **Refactor al renombrar** | Renombra una nota → todos los `[enlaces]` se actualizan. |
-| **Borrado seguro** | Soft delete quita el texto del enlace; strong delete elimina la línea completa. |
-| **Tags** | Frontmatter YAML con `:WNtag add/remove`. |
-| **Índice automático** | Regenera `notes/index.md` con enlaces a cada nota visible. |
-| **Helpers Markdown** | Toggle checkboxes/headings, continuación automática de listas, envolver selección en `[enlace]`. |
-| **Health check** | `:checkhealth wiki-notes` / `:WNhealth`. |
-
 ---
 
 ## Requisitos
 
 - **Neovim** ≥ 0.9
-- **[ripgrep](https://github.com/BurntSushi/ripgrep)** (`rg`) — opcional, pero recomendado para backlinks e índice rápidos.
-  Si no está, cae automáticamente a `grep`.
-
 ---
 
 ## Instalación
@@ -115,23 +91,5 @@ map("n", "<Leader>wh", ":WNhealth<CR>",            { silent = true, desc = "Wiki
 │   └── otra-nota.md
 └── templates/
     └── note.md                 # plantilla para notas nuevas
-
-<dir>/index.md — página de inicio. Manual.
-
-<dir>/notes/index.md — índice autogenerado. Solo edita el frontmatter.
-
-<dir>/notes/*.md — notas creadas con :WNnew o desde un [enlace].
-
-<dir>/templates/*.md — plantillas con placeholders {{var}}.
-
 ```
-### Ejemplo templates/note.md:
-```
-title: {{title}}
-slug: {{slug}}
-created: {{date}}
-tags: []
----
 
-# {{title}}
-```
