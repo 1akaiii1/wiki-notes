@@ -1,29 +1,3 @@
-# wiki-notes
-
-- Wiki personal minimalista en Markdown para Neovim.
-
----
-
-## Requisitos
-
-- **Neovim** ≥ 0.9
----
-
-## Instalación
-
-### lazy.nvim
-
-```lua
-{
-  "1akaiii1/wiki-notes",
-  config = function()
-    require("wiki-notes").setup({
-      dir = vim.fn.expand("~/wiki"),
-    })
-  end,
-}
-```
-
 ### vim-plug
 
 ```lua
