@@ -54,9 +54,11 @@ map("n", "<Leader>wX", ":WNdelete!<CR>",           { silent = true, desc = "Wiki
 map("n", "<Leader>wf", ":WNfollow<CR>",            { silent = true, desc = "Wiki: seguir enlace" })
 map("n", "<Leader>wb", ":WNbacklinks<CR>",         { silent = true, desc = "Wiki: backlinks" })
 map("n", "<Leader>wh", ":WNhealth<CR>",            { silent = true, desc = "Wiki: diagnóstico" })
+
+```
+
 ```
 ### Estructura de archivos
-```
 ~/wiki/
 ├── index.md                    # manual — tú lo mantienes
 ├── notes/
@@ -65,5 +67,5 @@ map("n", "<Leader>wh", ":WNhealth<CR>",            { silent = true, desc = "Wiki
 │   └── otra-nota.md
 └── templates/
     └── note.md                 # plantilla para notas nuevas
-```
 
+```
